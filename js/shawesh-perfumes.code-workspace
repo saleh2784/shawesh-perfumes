@@ -1,9 +1,7 @@
 {
-	"folders": [
-		{
-			"name": "shawesh-perfumes",
-			"path": ".."
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": ".."
+        }
+    ]
 }
