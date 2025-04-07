@@ -18,7 +18,7 @@ const storeContainer = document.getElementById('store');
 
 perfumes.forEach(perfume => {
   const card = document.createElement('div');
-  const message = ` مرحبا ارغب بشراء هذا العطر , الرجاء أن ترسل لي المزيد من التفاصيل حول التوفر وسعر الشحن , شكرا
+  const message = ` مرحبا ارغب بشراء هذا المنتج , الرجاء أن ترسل لي المزيد من التفاصيل حول التوفر وسعر الشحن , شكرا
   << ${perfume.name} -- ${perfume.price} >>`;
   const encodedMessage = encodeURIComponent(message);
 

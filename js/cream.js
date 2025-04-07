@@ -1,19 +1,14 @@
+// script.js
 const perfumes = [
-  { id: 1, name: "روشاز", price: "₪150", image: "assets/images/1.jpg" },
-  { id: 2, name: "اسمياكي", price: "₪150", image: "assets/images/2.jpg" },
-  { id: 3, name: "انفكتوس", price: "₪150", image: "assets/images/3.jpg" },
-  { id: 4, name: "كريد", price: "₪150", image: "assets/images/4.jpg" },
-  { id: 5, name: "بوس سنت", price: "₪150", image: "assets/images/5.jpg" },
-  { id: 6, name: "لاكوسست", price: "₪150", image: "assets/images/1.jpg" },
-  { id: 7, name: "روشاز", price: "₪150", image: "assets/images/2.jpg" },
-  { id: 8, name: "اسمياكي", price: "₪150", image: "assets/images/3.jpg" },
-  { id: 9, name: "انفكتوس", price: "₪150", image: "assets/images/4.jpg" },
-  { id: 10, name: "كريد", price: "₪150", image: "assets/images/5.jpg" },
-  { id: 11, name: "بوس سنت", price: "₪150", image: "assets/images/1.jpg" },
-  { id: 12, name: "لاكوسست", price: "₪150", image: "assets/images/2.jpg" },
+    // { id: 1, name: "Amber Nights امبر نايت", price: "₪150", image: "assets/images/1.jpg" },
+    { id: 1, name: "Ted Lapidus", price: "₪350", image: "https://images.pexels.com/photos/1961794/pexels-photo-1961794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 2, name: "Spring", price: "₪550", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 3, name: "Narciso Rodriguez", price: "₪50", image: "https://cdn.pixabay.com/photo/2023/06/01/06/21/perfume-8032808_640.jpg" },
+    { id: 4, name: "Lancome", price: "₪600", image: "https://www.april.co.il/Media/Uploads/3614273922975_1--.webp" },
+    { id: 5, name: "Yves Saint Laurent", price: "₪100", image: "https://www.april.co.il/Media/Uploads/3614273069557.webp" },
+    // ... rest of the perfume data
   ];
   
-
   const storeContainer = document.getElementById('store');
   
   perfumes.forEach(perfume => {
