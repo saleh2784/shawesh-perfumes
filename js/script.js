@@ -1,20 +1,39 @@
 // script.js
 const perfumes = [
-    // { id: 1, name: "Amber Nights امبر نايت", price: "₪150", image: "assets/images/1.jpg" },
-    { id: 1, name: "Amber Nights", price: "₪150", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 2, name: "Amber Nights" , price: "₪250", image: "https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 3, name: "Amber Night", price: "₪180", image: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 4, name: "Amber Night", price: "₪130", image: "https://images.pexels.com/photos/1961784/pexels-photo-1961784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 5, name: "Amber Nights", price: "₪170", image: "https://images.pexels.com/photos/965991/pexels-photo-965991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 6, name: "Amber Nights", price: "₪350", image: "https://images.pexels.com/photos/1961794/pexels-photo-1961794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 7, name: "Amber Nights", price: "₪550", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 8, name: "Amber Nights", price: "₪50", image: "https://cdn.pixabay.com/photo/2023/06/01/06/21/perfume-8032808_640.jpg" },
-    { id: 9, name: "Amber Nights", price: "₪600", image: "https://cdn.pixabay.com/photo/2017/06/09/15/40/bottle-2387210_640.jpg" },
-    { id: 10, name: "Amber Nights", price: "₪100", image: "https://cdn.pixabay.com/photo/2018/08/27/15/11/perfume-3635207_640.jpg" },
-    // ... rest of the perfume data
-  ];
-  
-  const storeContainer = document.getElementById('store');
+  { id: 1, name: "Amber Nights", price: "₪150", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg" },
+  { id: 2, name: "Jadore", price: "₪150", image: "https://www.hdbeauty.co.il/images/itempics/3348900417885_28022025111013_large.jpg" },
+  { id: 3, name: "Marly", price: "₪150", image: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg" },
+  { id: 4, name: "Paradis", price: "₪150", image: "https://images.pexels.com/photos/1961784/pexels-photo-1961784.jpeg" },
+  { id: 5, name: "Chevignon", price: "₪150", image: "https://images.pexels.com/photos/965991/pexels-photo-965991.jpeg" },
+  { id: 6, name: "Ted Lapidus", price: "₪150", image: "https://images.pexels.com/photos/1961794/pexels-photo-1961794.jpeg" },
+  { id: 7, name: "Spring", price: "₪150", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg" },
+  { id: 8, name: "Narciso Rodriguez", price: "₪150", image: "https://cdn.pixabay.com/photo/2023/06/01/06/21/perfume-8032808_640.jpg" },
+  { id: 9, name: "Lancome", price: "₪150", image: "https://www.april.co.il/Media/Uploads/3614273922975_1--.webp" },
+  { id: 10, name: "روشاز", price: "₪150", image: "assets/images/2.jpg" },
+  { id: 11, name: "اسمياكي", price: "₪150", image: "assets/images/2.jpg" },
+  { id: 12, name: "انفكتوس", price: "₪150", image: "assets/images/3.jpg" },
+  { id: 13, name: "كريد", price: "₪150", image: "assets/images/4.jpg" },
+  { id: 14, name: "بوس سنت", price: "₪150", image: "assets/images/5.jpg" },
+  { id: 15, name: "لاكوسست", price: "₪150", image: "assets/images/1.jpg" },
+  { id: 16, name: "Amber Nights", price: "₪150", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg" },
+  { id: 17, name: "Jadore", price: "₪150", image: "https://www.hdbeauty.co.il/images/itempics/3348900417885_28022025111013_large.jpg" },
+  { id: 18, name: "Marly", price: "₪150", image: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg" },
+  { id: 19, name: "Paradis", price: "₪150", image: "https://images.pexels.com/photos/1961784/pexels-photo-1961784.jpeg" },
+  { id: 20, name: "Chevignon", price: "₪150", image: "https://images.pexels.com/photos/965991/pexels-photo-965991.jpeg" },
+  { id: 21, name: "Ted Lapidus", price: "₪150", image: "https://images.pexels.com/photos/1961794/pexels-photo-1961794.jpeg" },
+  { id: 22, name: "Spring", price: "₪150", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg" },
+  { id: 23, name: "Narciso Rodriguez", price: "₪150", image: "https://cdn.pixabay.com/photo/2023/06/01/06/21/perfume-8032808_640.jpg" },
+  { id: 24, name: "Lancome", price: "₪150", image: "https://www.april.co.il/Media/Uploads/3614273922975_1--.webp" },
+  { id: 25, name: "روشاز", price: "₪150", image: "assets/images/2.jpg" },
+  { id: 26, name: "اسمياكي", price: "₪150", image: "assets/images/2.jpg" },
+  { id: 27, name: "انفكتوس", price: "₪150", image: "assets/images/3.jpg" },
+  { id: 28, name: "كريد", price: "₪150", image: "assets/images/4.jpg" },
+  { id: 29, name: "بوس سنت", price: "₪150", image: "assets/images/5.jpg" },
+  { id: 30, name: "لاكوسست", price: "₪150", image: "assets/images/1.jpg" },
+ 
+];
+
+const storeContainer = document.getElementById('store');
   
   perfumes.forEach(perfume => {
     const card = document.createElement('div');
@@ -59,4 +78,3 @@ const perfumes = [
         buttons[2].classList.add('active');
       }
   }
-  
