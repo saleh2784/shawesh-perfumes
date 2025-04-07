@@ -2,11 +2,34 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title> كريمات نسائية - الشاوِيش</title>
+  <title>الشاوِيش للعطور - Shawesh Perfumes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div class="store-title" >
+    <p> تابعنا على منصات التواصل الاجتماعي</p>
+  </div>
+  
+  <div class="social-section">
+    <a class="icon-button" href="https://www.instagram.com/saleh_shawesh" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="icon-button" href="https://www.facebook.com/shawesh99" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a class="icon-button" href="https://wa.me/+972505320456" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="icon-button" href="https://www.tiktok.com/@saleh.shawesh" target="_blank">
+    <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+  <div class="container banner-text" >
+    🌸مجموعة العطور الآن بتخفيضات هائلة🌸
+  </div>
+
   <div class="tabs">
     <a class="tab-button" href="index.html">🏠 الرئيسية</a>
     <a class="tab-button" href="men.html">👨 عطور رجالية</a>
@@ -16,6 +39,12 @@
     <button class="tab-button" onclick="switchTab('contact')">اتصل بنا</button>
     <button class="tab-button" onclick="switchTab('about')">من نحن</button>
   </div>
+
+  <h1 class="store-title2">الشاوِيش للعطور</h1>
+
+  <div id="store" class="grid_main"></div>
+
+  <button id="scrollToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
   <div id="contact">
     <p>📞 اتصل بنا عبر الواتساب: <a href="https://wa.me/+972505320456" target="_blank" style="color: #facc15;">+972505320456</a></p>
@@ -46,10 +75,6 @@
       نحن في الشاوِيش للعطور نؤمن بأن كل رائحة تحمل قصة. نقدم تشكيلة من العطور الفاخرة التي تم اختيارها بعناية لتعكس ذوقك وشخصيتك. جودة، أناقة، وتميز في كل زجاجة.
     </p>
   </div>
-  
-  <h1 class="store-title">كريمات نسائية</h1>
-
-  <div id="store" class="grid"></div>
   <div class="social-section">
     <a class="icon-button" href="https://www.instagram.com/saleh_shawesh" target="_blank">
       <i class="fab fa-instagram"></i>
@@ -65,9 +90,7 @@
     </a>
   </div>
   
-  <button id="scrollToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
-
-  <script src="js/cream.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
