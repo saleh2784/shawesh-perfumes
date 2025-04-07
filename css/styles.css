@@ -25,13 +25,20 @@ body {
   justify-items: center;
 }
 
+.grid_main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 3 items per row */
+  gap: 24px;
+  justify-items: center;
+}
+
 .container {
-  max-width: 400px;
+  max-width: 598px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 30px;
   align-items: center;
   font-weight: bold;
-  height: 10vh;
+  height: 5vh;
   text-align: center;
   
 
@@ -40,7 +47,7 @@ body {
   color: white;
   display: flex;
   font-size: 2rem;
-  background: rgba(0, 0, 0, 0.4); /* Optional: darken background behind text */
+  background: rgba(0, 0, 0, 0.9); /* Optional: darken background behind text */
   
   }
 .store-title {
@@ -50,6 +57,13 @@ body {
   font-weight: 800;
   margin-bottom: 2rem;
   }
+  .store-title2 {
+    text-align: center;
+    font-size: 5.0rem;
+    color: hsl(105, 80%, 51%);  /* ❌ This is the current purple color */
+    font-weight: 1200;
+    margin-bottom: 5rem;
+    }
 
   .social-section {
       display: flex;
