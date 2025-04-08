@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title> معطر للجو - الشاوِيش</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<!-- search bar  -->
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="ابحث عن اسم المعطر..." onkeyup="filterMetahers()" />
+</div>
+<!-- end search bar -->
 <body>
   <div class="tabs">
     <a class="tab-button" href="index.html">🏠 الرئيسية</a>
@@ -16,8 +22,6 @@
     <a class="tab-button" href="about.html">من نحن</a>
   </div>
 
-  
-  
   <h1 class="store-title">معطر للجو</h1>
 
   <div id="store" class="grid"></div>

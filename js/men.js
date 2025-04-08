@@ -1,61 +1,37 @@
-const perfumes = [
-  { id: 1, name: "روشاز", price: "₪150", image: "assets/images/1.jpg" },
-  { id: 2, name: "اسمياكي", price: "₪150", image: "assets/images/2.jpg" },
-  { id: 3, name: "انفكتوس", price: "₪150", image: "assets/images/3.jpg" },
-  { id: 4, name: "كريد", price: "₪150", image: "assets/images/4.jpg" },
-  { id: 5, name: "بوس سنت", price: "₪150", image: "assets/images/5.jpg" },
-  { id: 6, name: "لاكوسست", price: "₪150", image: "assets/images/1.jpg" },
-  { id: 7, name: "روشاز", price: "₪150", image: "assets/images/2.jpg" },
-  { id: 8, name: "اسمياكي", price: "₪150", image: "assets/images/3.jpg" },
-  { id: 9, name: "انفكتوس", price: "₪150", image: "assets/images/4.jpg" },
-  { id: 10, name: "كريد", price: "₪150", image: "assets/images/5.jpg" },
-  { id: 11, name: "بوس سنت", price: "₪150", image: "assets/images/1.jpg" },
-  { id: 12, name: "لاكوسست", price: "₪150", image: "assets/images/2.jpg" },
-  ];
-  
 
-  const storeContainer = document.getElementById('store');
-  
-  perfumes.forEach(perfume => {
-    const card = document.createElement('div');
+const storeContainer = document.getElementById('store');
+
+function renderWomenPerfumes(list) {
+  storeContainer.innerHTML = '';
+
+  if (list.length === 0) {
+    storeContainer.innerHTML = "<p>لا توجد عطور متاحة حاليا.</p>";
+    return;
+  }
+
+  list.forEach(men_perfume => {
     const message = ` مرحبا ارغب بشراء هذا المنتج , الرجاء أن ترسل لي المزيد من التفاصيل حول التوفر وسعر الشحن , شكرا
-    << ${perfume.name} -- ${perfume.price} >>`;
+<< ${men_perfume.name} -- ${men_perfume.price} >>`;
     const encodedMessage = encodeURIComponent(message);
 
+    const card = document.createElement('div');
     card.className = 'card';
+
     card.innerHTML = `
-    <div class="image-wrapper">
-        <img src="${perfume.image}" alt="${perfume.name}">
-        <a class="order-button" href="https://wa.me/+972505320456?text=${encodedMessage}"target="_blank">
-        🛍️ اطلب عطرك الآن
+      <div class="image-wrapper">
+        <a href="product.html?id=${men_perfume.id}">
+          <img src="${men_perfume.image}" alt="${men_perfume.name}">
         </a>
-    </div>
-    <div class="perfume-name">${perfume.name}</div>
-    <div class="perfume-price">${perfume.price}</div>
+        <a class="order-button" href="https://wa.me/+972505320456?text=${encodedMessage}" target="_blank">
+          🛍️ اطلب عطرك الآن
+        </a>
+      </div>
+      <div class="perfume-name">${men_perfume.name}</div>
+      <div class="perfume-price">${men_perfume.price}</div>
     `;
+
     storeContainer.appendChild(card);
   });
-  
-  function switchTab(tab) {
-    const store = document.getElementById('store');
-    const contact = document.getElementById('contact');
-    const about = document.getElementById('about');
-    const buttons = document.querySelectorAll('.tab-button');
-    
-    // Hide all sections
-    store.style.display = 'none';
-    contact.style.display = 'none';
-    about.style.display = 'none';
-    buttons.forEach(btn => btn.classList.remove('active'));
-  
-    if (tab === 'store') {
-        store.style.display = 'grid';
-        buttons[0].classList.add('active');
-      } else if (tab === 'contact') {
-        contact.style.display = 'block';
-        buttons[1].classList.add('active');
-      } else if (tab === 'about') {
-        about.style.display = 'block';
-        buttons[2].classList.add('active');
-      }
-  }
+}
+
+renderWomenPerfumes(men_perfumes);

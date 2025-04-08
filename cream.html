@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title> كريمات نسائية - الشاوِيش</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- search bar  -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="ابحث عن اسم الكريم..." onkeyup="filterPerfumes()" />
+  </div>
+  <!-- end search bar -->
   <div class="tabs">
     <a class="tab-button" href="index.html">🏠 الرئيسية</a>
     <a class="tab-button" href="men.html">👨 عطور رجالية</a>
@@ -36,6 +42,8 @@
   
   <button id="scrollToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
+  <script src="js/products-data-creams.js"></script>
+  <script src="js/products-data-perf-women.js"></script>
   <script src="js/cream.js"></script>
 
 </body>
