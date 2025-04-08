@@ -35,3 +35,22 @@ function renderWomenPerfumes(list) {
 }
 
 renderWomenPerfumes(women_perfumes);
+
+// Filter function
+// Generic filter function
+function filterPerfumes(perfumeList, renderFn) {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = perfumeList.filter(perfume =>
+    perfume.name.toLowerCase().includes(input)
+  );
+  renderFn(filtered);
+}
+
+// Initial render
+renderWomenPerfumes(women_perfumes);
+
+// Connect to input
+document.getElementById('searchInput').addEventListener('input', () => {
+  filterPerfumes(women_perfumes, renderWomenPerfumes);
+});
+

@@ -1,14 +1,7 @@
-const metahers = [
-  { id: 1, name: "Ted Lapidus", price: "₪350", image: "https://images.pexels.com/photos/1961794/pexels-photo-1961794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-  { id: 2, name: "Spring", price: "₪550", image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-  { id: 3, name: "Narciso Rodriguez", price: "₪50", image: "https://cdn.pixabay.com/photo/2023/06/01/06/21/perfume-8032808_640.jpg" },
-];
-
 const storeContainer = document.getElementById('store');
 
-// Function to render the metahers
-function renderMetahers(list) {
-  storeContainer.innerHTML = '';
+function renderMetaher(list) {
+  storeContainer.innerHTML = ''; // Clear previous content
 
   if (list.length === 0) {
     storeContainer.innerHTML = "<p>لم يتم العثور على نتائج.</p>";
@@ -20,35 +13,35 @@ function renderMetahers(list) {
     const message = ` مرحبا ارغب بشراء هذا المنتج , الرجاء أن ترسل لي المزيد من التفاصيل حول التوفر وسعر الشحن , شكرا
 << ${metaher.name} -- ${metaher.price} >>`;
     const encodedMessage = encodeURIComponent(message);
-
+    
     card.className = 'card';
     card.innerHTML = `
-      <div class="image-wrapper">
-          <img src="${metaher.image}" alt="${metaher.name}">
-          <a class="order-button" href="https://wa.me/+972505320456?text=${encodedMessage}" target="_blank">
-            🛍️ اطلب عطرك الآن
-          </a>
-      </div>
-      <div class="perfume-name">${metaher.name}</div>
-      <div class="perfume-price">${metaher.price}</div>
-    `;
+    <div class="image-wrapper">
+      <a href="product.html?id=${metaher.id}">
+        <img src="${metaher.image}" alt="${metaher.name}">
+      </a>
+      <a class="order-button" href="https://wa.me/+972505320456?text=${encodedMessage}" target="_blank">
+        🛍️ اطلب عطرك الآن
+      </a>
+    </div>
+    <div class="perfume-name">${metaher.name}</div>
+    <div class="perfume-price">${metaher.price}</div>
+  `;;
     storeContainer.appendChild(card);
   });
 }
 
 // Initial render
-renderMetahers(metahers);
+renderMetaher(metaher);
 
 // Filter function
-function filterMetahers() {
+function filterPerfumes() {
   const input = document.getElementById('searchInput').value.toLowerCase();
-  const filtered = metahers.filter(m =>
-    m.name.toLowerCase().includes(input)
-  );
-  renderMetahers(filtered);
+  const filtered = metaher.filter(metaher => metaher.name.toLowerCase().includes(input));
+  renderMetaher(filtered);
 }
 
-// Tab switching logic (if needed)
+// Tab switching logic
 function switchTab(tab) {
   const store = document.getElementById('store');
   const contact = document.getElementById('contact');
@@ -71,3 +64,7 @@ function switchTab(tab) {
     buttons[2].classList.add('active');
   }
 }
+// Hook up search input
+document.getElementById('searchInput').addEventListener('input', () => {
+  filterPerfumes(metaher, renderMetaher);
+});

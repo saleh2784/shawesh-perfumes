@@ -61,8 +61,8 @@ body {
     text-align: center;
     font-size: 5.0rem;
     color: hsl(105, 80%, 51%);  /* ❌ This is the current purple color */
-    font-weight: 1200;
-    margin-bottom: 5rem;
+    font-weight: 1000;
+    margin-bottom: 2rem;
     }
 
   .social-section {
@@ -189,5 +189,19 @@ body {
       color: #6b21a8;
       transform: scale(1.05);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    /* <!-- search bar  --> */
+    .search-container {
+      text-align: center;
+      margin: 20px auto;
+    }
+    
+    #searchInput {
+      padding: 10px 15px;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
     }
     

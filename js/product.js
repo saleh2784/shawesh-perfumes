@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const productId = parseInt(params.get('id'), 10);
 
 // Combine all product types into one array
-const allProducts = [...women_perfumes, ...men_perfumes, ...creams];
+const allProducts = [...women_perfumes, ...men_perfumes, ...creams, ...main_prod, ...metaher];
 
 // Find the product with matching ID
 const product = allProducts.find(p => p.id === productId);

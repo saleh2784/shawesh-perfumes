@@ -13,7 +13,7 @@ function renderCreams(list) {
     const message = ` مرحبا ارغب بشراء هذا المنتج , الرجاء أن ترسل لي المزيد من التفاصيل حول التوفر وسعر الشحن , شكرا
 << ${cream.name} -- ${cream.price} >>`;
     const encodedMessage = encodeURIComponent(message);
-
+    
     card.className = 'card';
     card.innerHTML = `
   <div class="image-wrapper">

@@ -1,7 +1,6 @@
-
 const storeContainer = document.getElementById('store');
 
-function renderWomenPerfumes(list) {
+function renderMenPerfumes(list) {
   storeContainer.innerHTML = '';
 
   if (list.length === 0) {
@@ -29,9 +28,19 @@ function renderWomenPerfumes(list) {
       <div class="perfume-name">${men_perfume.name}</div>
       <div class="perfume-price">${men_perfume.price}</div>
     `;
-
     storeContainer.appendChild(card);
   });
 }
+renderMenPerfumes(men_perfumes);
 
-renderWomenPerfumes(men_perfumes);
+// Filter function
+function filterPerfumes(perfumeList) {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = perfumeList.filter(perfume =>
+    perfume.name.toLowerCase().includes(input)
+  );
+  renderMenPerfumes(filtered);
+}
+document.getElementById('searchInput').addEventListener('input', () => {
+  filterPerfumes(men_perfumes);
+});

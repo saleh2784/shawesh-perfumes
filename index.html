@@ -30,7 +30,11 @@
   <div class="container banner-text" >
     🌸مجموعة العطور الآن بتخفيضات هائلة🌸
   </div>
-
+  <!-- search bar  -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="ابحث عن اسم العطر..." onkeyup="filterPerfumeList()" />
+  </div>
+  
   <div class="tabs">
     <a class="tab-button" href="index.html">🏠 الرئيسية</a>
     <a class="tab-button" href="men.html">👨 عطور رجالية</a>
@@ -41,10 +45,7 @@
     <a class="tab-button" href="about.html">من نحن</a>
 
   </div>
-  <!-- search bar  -->
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="ابحث عن اسم العطر..." onkeyup="filterPerfumeList()" />
-  </div>
+
   
   
 
@@ -67,6 +68,7 @@
     </a>
   </div>
   
+  <script src="js/products-data-main.js"></script>
   <script src="js/main.js"></script>
 
 </body>
